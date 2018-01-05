@@ -534,8 +534,8 @@ public class MainActivity extends Activity implements Constants{
 	
 	public void openChangelog (View v) {
 		String title = getResources().getString(R.string.changelog);
-		String changelog = getResources().getString(R.string.changelog_rom);
-		new Changelog(this, mContext, title, changelog, true).execute();
+		String changelog = RomUpdate.getChangelog(mContext);
+		new Changelog(this, mContext, title, changelog, false).execute();
 	}
 
 	private void showWhatsNew() {
